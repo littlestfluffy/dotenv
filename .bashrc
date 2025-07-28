@@ -2,6 +2,10 @@
 # ~/.bashrc
 #
 
+if uwsm check may-start && uwsm select; then
+  exec systemd-cat -t uwsm_start uwsm start default
+fi
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -10,8 +14,6 @@ if command -v fish &> /dev/null; then
   fish
   exit $?
 fi
-
-[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
