@@ -1,0 +1,29 @@
+[Desktop Entry]
+Version=1.0
+Name=Emby
+GenericName=Web Browser
+GenericName[nl]=Webbrowser
+GenericName[ru]=Веб-браузер
+Comment=Access the Internet
+Comment[nl]=Verbinding maken met internet
+Comment[ru]=Доступ в Интернет
+Exec=/usr/bin/vivaldi-stable %U --app=https://emby.dreamcare.cloud/
+StartupNotify=true
+Terminal=false
+Icon=discord
+Type=Application
+Categories=Network;WebBrowser;
+Actions=new-window;new-private-window;
+
+[Desktop Action new-window]
+Name=New Window
+Name[nl]=Nieuw venster
+Name[ru]=Новое окно
+Exec=/usr/bin/vivaldi-stable --new-window
+
+[Desktop Action new-private-window]
+Name=New Private Window
+Name[nl]=Nieuw privévenster
+Name[ru]=Новое приватное окно
+Exec=/usr/bin/vivaldi-stable --incognito
+

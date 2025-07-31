@@ -48,17 +48,16 @@
         "window-rewrite": {
             "class<steam_app_[0-9]+>": "",
             "class<Vivaldi.*>": "",
-            ".*discord.*": "",
+            "class<.*vivaldi.*discord.com.*>": "",
             "class<hexchat>": "",
             "class<kitty>": "",
             "class<steam>": "",
-	    "class<.*Telegram.*>": "",
+	    			"class<.*vivaldi.*telegram.com.*>": "",
             "class<jetbrains-idea>": "",
             "title<Picture in picture>": "",
-	    ".*youtube.com.*": "",
-	    "title<.*management.*screen.*>": "#",
+	    "class<.*vivaldi-.*youtube.com.*>": "",
 	    "title<.*emby.dreamcare.cloud.*>": "",
-	    "title<.*outlook.*>": "",
+	    "class<.*vivaldi.*outlook.com.*>": "",
 	    "title<.*teams.*>": ""
         }
     },
