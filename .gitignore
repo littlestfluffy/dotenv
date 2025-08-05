@@ -1,1 +1,9 @@
-**
+/*
+!/.local
+/.local/*
+!/.local/bin
+!/.local/docs
+!/.local/share
+/.local/share/*
+!/.local/share/applications
+
