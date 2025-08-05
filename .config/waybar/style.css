@@ -4,6 +4,7 @@
     font-size: 16px;
     transition: background-color .5s;
     box-shadow: none;
+    font-weight: bolder;
 }
 
 #waybar {
@@ -30,7 +31,6 @@ label.module, #workspaces button {
     border-radius: 20px;
     border: none;
     box-shadow: none;
-    font-weight: normal;
 }
 
 label.module:hover, #workspaces button:hover {
