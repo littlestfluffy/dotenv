@@ -1,7 +1,11 @@
 /*
 !/.config
 /.config/*
-
+!/.config/fontconfig
+!/.config/foot
+!/.config/hypr
+!/.config/rofi
+!/.config/waybar
 !/.local
 /.local/*
 !/.local/bin
