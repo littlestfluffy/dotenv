@@ -2,6 +2,6 @@
 Version=1.0
 Name=ChatGPT
 URL=https://chatgpt.com/
-Icon=vivaldi
+Icon=~/.local/share/applications/Links/ChatGPT.png
 Type=Link
 

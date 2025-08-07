@@ -20,7 +20,7 @@
 
 //  ],
   "modules-right": [
-    //    "bluetooth",
+    "bluetooth",
     "pulseaudio",
     "network",
     "temperature",
@@ -42,33 +42,33 @@
     "all-outputs": false,
     "show-special": true,
     "warp-on-scroll": false,
-    "format": "{icon} {windows}",
+    "format": "{icon}",
     "window-rewrite-default": "",
     "format-window-separator": " ",
     "format-icons": {
-//      "1": "",
-//      "2": "",
-//      "3": "",
-//      "4": "",
-//      "5": "",
-//      "6": "",
-//      "7": "",
-//      "8": "",
-//      "9": "",
-//      "10": "",
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": "",
       "default": "",
       "active": "",
       "urgent": "",
-      "special": "",
+      "special": "",
       "visible": "",
       "persistent": ""
     },
     "rewrite-window": {}
   },
   "bluetooth": {
-    "format": " {num_connections}",
-    "format-disabled": "󰂲",
-    // an empty format will hide the module
+    "format": "",
+    "format-disabled": "<span color='#FB6962'></span>",
+    "on-click-middle": "blueman-manager",
     "tooltip-format": "{controller_alias}\t{controller_address}",
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
@@ -161,7 +161,7 @@
   },
   "custom/notification": {
     "tooltip": false,
-    "format": "{icon}",
+    "format": "<span color='#FCFC99'>{icon}</span>",
     "format-icons": {
       "notification": "",
       "none": "",
@@ -180,7 +180,7 @@
     "escape": true
   },
   "custom/power": {
-    "format": "",
+    "format": "<span color='#FB6962'></span>",
     "on-click": "syspower",
     "tooltip": false
   },

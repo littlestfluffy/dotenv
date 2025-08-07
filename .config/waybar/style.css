@@ -1,7 +1,6 @@
 * {
     font-family: "Noto Sans Mono SemiBold", sans-serif;
     color: #BC958E;
-    font-size: 16px;
     transition: background-color .5s;
     box-shadow: none;
     font-weight: bolder;
@@ -11,12 +10,8 @@
     background: transparent;
 }
 
-#waybar img {
-    font-size: 40px;
-}
-
 .modules-left,
-/*.modules-center,*/
+    /*.modules-center,*/
 .modules-right {
     background: rgba(0, 0, 8, .85);
     margin: 5px 5px 0 5px;

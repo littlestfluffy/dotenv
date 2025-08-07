@@ -33,7 +33,7 @@ sudo pacman -S nvidia-open nvidia-utils lib32-nvidia-utils
 # Other recommended core-ish tools (bar, notification daemons etc)
 sudo pacman -S otf-font-awesome noto-fonts noto-fonts-extra noto-fonts-emoji noto-fonts-cjk papirus-icon-theme # fonts
 sudo pacman -S waybar swaync xdg-desktop-portal-hyprland # taskbar, notification center
-sudo pacman -S pipewire wireplumber playerctl pipewire-audio jack2 # audio stuff
+sudo pacman -S pipewire wireplumber pipewire-pulse pipewire-alsa # audio
 
 # Other tools (browser)
 sudo pacman -S vivaldi vivaldi-ffmpeg-codecs libxdamage
