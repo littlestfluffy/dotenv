@@ -85,6 +85,7 @@
     "format-muted": " muted {format_source}",
     "format-source": " {volume}%",
     "format-source-muted": "",
+    "on-click-middle": "pavucontrol",
     "format-icons": {
       "headphone": "",
       "hands-free": "",
