@@ -166,16 +166,16 @@
   },
   "custom/notification": {
     "tooltip": false,
-    "format": "<span color='#FCFC99'>{icon}</span>",
+    "format": "{icon}",
     "format-icons": {
-      "notification": "",
-      "none": "",
+      "notification": "",
+      "none": "",
       "dnd-notification": "",
       "dnd-none": "",
-      "inhibited-notification": "",
-      "inhibited-none": "",
-      "dnd-inhibited-notification": "",
-      "dnd-inhibited-none": ""
+      "inhibited-notification": "",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "",
+      "dnd-inhibited-none": ""
     },
     "return-type": "json",
     "exec-if": "which swaync-client",
