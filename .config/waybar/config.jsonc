@@ -5,14 +5,14 @@
   // Waybar at top layerq
   "position": "top",
   // Waybar position (top|bottom|left|right)
-  "height": 43,
+  //"height": 30,
   // Waybar height (to be removed for auto height)
   // "width": 1280, // Waybar width
   "spacing": 0,
   // Gaps between modules (4px)
   // Choose the order of the modules
   "modules-left": [
-//    "custom/launcher",
+    "custom/launcher",
     "hyprland/workspaces",
     "wlr/taskbar"
 //    "mpris"
@@ -36,7 +36,7 @@
   ],
   "custom/launcher": {
     "format": "",
-    "on-click": "ydotool key 125:1 32:1 32:0 125:0"
+    "on-click": "bash -c \"$(hyprctl -j binds | jq -r '.[] | select(.description == \"app-launcher\") .arg')\""
   },
   //Modules configuration
   "hyprland/workspaces": {

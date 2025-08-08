@@ -13,14 +13,14 @@
     /*.modules-center,*/
 .modules-right {
     background: rgba(0, 0, 8, .75);
-    margin: 5px 5px 0 5px;
+    margin: 2px 2px 0 2px;
     padding: 0;
     border-radius: 5px;
     border: 1px solid #BC958E;
 }
 
 label.module, button {
-    padding: 0 10px;
+    padding: 5px 10px;
     margin: 0;
     border-radius: 0;
     border: none;
