@@ -31,3 +31,13 @@ label.module, #workspaces button {
 label.module:hover, #workspaces button:hover {
     background: rgba(128, 128, 128, .75);
 }
+
+menu {
+    border-radius: 15px;
+    background: rgba(0, 0, 8, 1);
+    color: #BC958E;
+}
+
+menuitem {
+    border-radius: 15px;
+}
