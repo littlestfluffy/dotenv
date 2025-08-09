@@ -7,6 +7,7 @@
 if command -v uwsm &> /dev/null && uwsm check may-start && uwsm select; then
   test ! -f ~/.config/hypr/settings.conf && cp ~/.config/hypr/settings.example.conf ~/.config/hypr/settings.conf
   test ! -f ~/.config/hypr/monitors.conf && touch ~/.config/hypr/monitors.conf
+  test ! -f ~/.config/hypr/workspaces.conf && touch ~/.config/hypr/workspaces.conf
   exec systemd-cat -t uwsm_start uwsm start hyprland-uwsm.desktop
 fi
 
