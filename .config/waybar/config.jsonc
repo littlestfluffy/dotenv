@@ -13,41 +13,85 @@
   // Choose the order of the modules
   "modules-left": [
     "custom/launcher",
-    "hyprland/workspaces",
-    "wlr/taskbar"
+    "hyprland/workspaces"
+
 //    "mpris"
   ],
 //  "modules-center": [
-
+//    "hyprland/window"
 //  ],
   "modules-right": [
-    "bluetooth",
+    "group/group-tray",
     "pulseaudio",
-    "network",
     "temperature",
     "cpu",
     "memory",
     "hyprland/language",
     "battery",
     "battery#bat2",
+    "bluetooth",
+    "network",
     "clock",
     "custom/notification",
-    "custom/power"
+    "group/group-power"
   ],
+  "group/group-tray": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 600,
+      "children-class": "not-power",
+      "transition-left-to-right": true
+    },
+    "modules": ["custom/menu","tray"]
+  },
+  "group/group-power": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/power",
+      "custom/lock",
+      "custom/reboot"
+    ]
+  },
+  "custom/lock": {
+    "format": "",
+    "tooltip-format": "Lock Session",
+    "on-click": "loginctl lock-session"
+  },
+  "custom/reboot": {
+    "format": "",
+    "tooltip-format": "Reboot System",
+    "on-click": "reboot"
+  },
+  "custom/power": {
+    "format": "",
+    "tooltip-format": "Shutdown System",
+    "on-click": "shutdown now"
+  },
+  "custom/menu":{
+    "format": ""
+  },
+  "tray": {
+    "icon-size": 16,
+    "rotate": 0,
+    "spacing": 3
+  },
   "custom/launcher": {
-    "format": "",
+    "format": "<big></big>",
     "on-click": "bash -c \"$(hyprctl -j binds | jq -r '.[] | select(.description == \"app-launcher\") .arg')\""
   },
-  //Modules configuration
   "hyprland/workspaces": {
     "on-click": "activate",
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
-    "disable-scroll": true,
-    "all-outputs": false,
+    "all-outputs": true,
     "show-special": true,
     "warp-on-scroll": false,
-    "format": "{icon}",
+    "format": "<big>{icon}</big>",
+//    "format": "<big>{icon}</big> {windows}",
     "window-rewrite-default": "",
     "format-window-separator": " ",
     "format-icons": {
@@ -62,17 +106,19 @@
       "9": "",
       "10": "",
       "default": "",
-      "active": "",
-      "urgent": "",
-      "special": "",
-      "visible": "",
-      "persistent": ""
+      "special": ""
     },
-    "rewrite-window": {}
+    "workspace-taskbar": {
+      "enable": true,
+      "update-active-window": true,
+      "format": "{icon}",
+      "icon-theme": ["Papirus-Dark", "Papirus"],
+//      "ignore-list": [ "Vivaldi-stable", "Firefox - .*" ],
+      "on-click-window": "hyprctl dispatch focuswindow address:{address}"
+    }
   },
   "bluetooth": {
     "format": "",
-    "format-disabled": "<span color='#FB6962'></span>",
     "on-click-middle": "blueman-manager",
     "tooltip-format": "{controller_alias}\t{controller_address}",
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
@@ -105,10 +151,10 @@
   "network": {
     "interval": 1,
     "format-wifi": " {ipaddr}/{cidr}",
-    "format-ethernet": " {ipaddr}/{cidr}",
-    "tooltip-format": " {ifname} via {gwaddr} ",
+    "format-ethernet": "",
     "format-linked": " {ifname} (No IP)",
-    "format-disconnected": " Disconnected"
+    "format-disconnected": " Disconnected",
+    "tooltip-format": "{ipaddr}/{cidr} on {ifname} via {gwaddr} "
   },
   "cpu": {
     "interval": 1,
@@ -117,15 +163,6 @@
   "memory": {
     "interval": 1,
     "format": " {percentage}%"
-  },
-  "wlr/taskbar": {
-    "format": "{icon}",
-    "icon-theme": [
-      "Papirus-Dark",
-      "Papirus"
-    ],
-    "tooltip-format": "{title}",
-    "on-click": "activate"
   },
   "temperature": {
     "interval": 1,
@@ -185,18 +222,18 @@
     "on-click": "swaync-client -t -sw",
     "escape": true
   },
-  "custom/power": {
-    "format": "<span color='#FB6962'></span>",
-    "tooltip": false,
-    "menu": "on-click",
-    "menu-file": "~/.config/waybar/power_menu.xml",
-    "menu-actions": {
-      "suspend": "systemctl suspend",
-      "reboot": "reboot",
-      "shutdown": "shutdown",
-      "logout": "uwsm stop"
-    }
-  },
+//  "custom/power": {
+//    "format": "<span color='#FB6962'></span>",
+//    "tooltip": false,
+//    "menu": "on-click",
+//    "menu-file": "~/.config/waybar/power_menu.xml",
+//    "menu-actions": {
+//      "suspend": "systemctl suspend",
+//      "reboot": "reboot",
+//      "shutdown": "shutdown",
+//      "logout": "uwsm stop"
+//    }
+//  },
   "mpris": {
     "interval": 1,
     "format": "{status_icon} [{status}] <b>{title}</b> <span alpha='60%'>by</span> {artist} <span alpha='60%'>on</span> {album} <span alpha='60%'>[{position}/{length}]</span>",
