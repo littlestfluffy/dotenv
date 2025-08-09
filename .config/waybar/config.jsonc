@@ -149,12 +149,19 @@
     "on-click": "pavucontrol"
   },
   "network": {
-    "interval": 1,
-    "format-wifi": " {ipaddr}/{cidr}",
+    "interval": 5,
+    "format-wifi": "{icon}",
     "format-ethernet": "",
-    "format-linked": " {ifname} (No IP)",
-    "format-disconnected": " Disconnected",
-    "tooltip-format": "{ipaddr}/{cidr} on {ifname} via {gwaddr} "
+    "format-linked": " (No IP)",
+    "format-disconnected": "",
+    "tooltip-format-disconnected": "Disconnected",
+    "on-click-middle": "foot nmtui",
+    "tooltip-format": "{ipaddr}/{cidr} on {ifname} via {gwaddr} ",
+    "format-icons": [
+      "<span color='#FF8B94'></span>",
+      "<span color='#FFE29A'></span>",
+      ""
+    ]
   },
   "cpu": {
     "interval": 1,
