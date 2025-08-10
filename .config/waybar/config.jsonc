@@ -50,10 +50,15 @@
       "transition-left-to-right": false
     },
     "modules": [
+      "custom/power-control",
       "custom/power",
-      "custom/lock",
-      "custom/reboot"
+      "custom/reboot",
+      "custom/lock"
     ]
+  },
+  "custom/power-control": {
+    "format": "",
+    "tooltip": false
   },
   "custom/lock": {
     "format": "",
