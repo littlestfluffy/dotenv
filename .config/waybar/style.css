@@ -61,6 +61,6 @@ button.urgent {
     color: #A0A4B0;
 }
 
-#network.linked, #network.wifi, #network.ethernet {
-    color: #A3E4B5;
-}
+/*#network.linked, #network.wifi, #network.ethernet {*/
+/*    color: #A3E4B5;*/
+/*}*/
