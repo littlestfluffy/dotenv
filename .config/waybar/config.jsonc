@@ -14,7 +14,6 @@
   "modules-left": [
     "custom/launcher",
     "hyprland/workspaces"
-
 //    "mpris"
   ],
 //  "modules-center": [
@@ -155,7 +154,8 @@
     "format-linked": " (No IP)",
     "format-disconnected": "",
     "tooltip-format-disconnected": "Disconnected",
-    "on-click-middle": "foot nmtui",
+    "on-click": "nmgui",
+    "on-click-middle": "nm-connection-editor",
     "tooltip-format": "{ipaddr}/{cidr} on {ifname} via {gwaddr} ",
     "format-icons": [
       "<span color='#FF8B94'></span>",
@@ -229,29 +229,26 @@
     "on-click": "swaync-client -t -sw",
     "escape": true
   },
-//  "custom/power": {
-//    "format": "<span color='#FB6962'></span>",
-//    "tooltip": false,
-//    "menu": "on-click",
-//    "menu-file": "~/.config/waybar/power_menu.xml",
-//    "menu-actions": {
-//      "suspend": "systemctl suspend",
-//      "reboot": "reboot",
-//      "shutdown": "shutdown",
-//      "logout": "uwsm stop"
-//    }
+//  "custom/mpris": {
+//    "exec": "python3 -u ~/.config/hypr/scripts/scrolling-mpris.py",
+//    "format": "{text}",
+//    "return-type": "json",
+//    "on-click": "playerctl play-pause"
 //  },
   "mpris": {
     "interval": 1,
-    "format": "{status_icon} [{status}] <b>{title}</b> <span alpha='60%'>by</span> {artist} <span alpha='60%'>on</span> {album} <span alpha='60%'>[{position}/{length}]</span>",
+    "format": "{status_icon} [<b>{title}</b> <span alpha='60%'>by</span> {artist} <span alpha='60%'>on</span> {album} <span alpha='60%'>[{position}/{length}]</span>",
+//    "dynamic-order": ["artist", "title", "album", "position", "length"],
     //    "format-paused": "{status_icon} <b>{title}</b> <span alpha='60%'>by</span> {artist} <span alpha='60%'>on</span> {album} <span alpha='60%'>[{position}/{length}]</span>",
     "player-icons": {
       "default": ""
     },
+    "player-len": 25,
+    "ellipsis": ".",
     "status-icons": {
       "playing": "",
       "paused": "",
       "stopped": ""
     }
-  }
+  },
 }

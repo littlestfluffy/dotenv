@@ -58,7 +58,6 @@ sudo pacman -S bluez blueman
 sudo systemctl enable --now bluetooth.service
 ```
 
-
 ### Yay Package Manager
 
 ```shell
@@ -66,6 +65,12 @@ sudo pacman -S --needed git base-devel
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin 
 makepkg -si
+```
+
+#### Network Manager GUI
+
+```shell
+sudo yay -S nmgui-bin nm-connection-editor
 ```
 
 ### User Utilities
