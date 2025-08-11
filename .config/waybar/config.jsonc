@@ -17,7 +17,7 @@
 //    "mpris"
   ],
 //  "modules-center": [
-//    "hyprland/window"
+//
 //  ],
   "modules-right": [
     "group/group-tray",
@@ -34,6 +34,17 @@
     "custom/notification",
     "group/group-power"
   ],
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "",
+      "performance": "",
+      "balanced": "",
+      "power-saver": ""
+    }
+  },
   "group/group-tray": {
     "orientation": "inherit",
     "drawer": {
@@ -46,14 +57,15 @@
   "group/group-power": {
     "orientation": "inherit",
     "drawer": {
-      "transition-duration": 500,
+      "click-to-reveal": true,
       "transition-left-to-right": false
     },
     "modules": [
       "custom/power-control",
       "custom/power",
       "custom/reboot",
-      "custom/lock"
+      "custom/lock",
+      "power-profiles-daemon"
     ]
   },
   "custom/power-control": {

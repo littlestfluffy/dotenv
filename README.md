@@ -87,3 +87,7 @@ sudo pacman -S celluloid
 # Notepad/scratch pad
 sudo pacman -S textpieces
 ```
+
+```shell
+yay -S power-profiles-daemon # Power Utilities
+```
