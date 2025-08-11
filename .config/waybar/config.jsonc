@@ -91,12 +91,11 @@
     "on-click": "activate",
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
-    "all-outputs": true,
+    "all-outputs": false,
     "show-special": true,
     "warp-on-scroll": false,
-    "format": "<big>{icon}</big>",
-//    "format": "<big>{icon}</big> {windows}",
-    "window-rewrite-default": "",
+    "format": "<big>{icon} <b>{windows}</b></big>",
+    "window-rewrite-default": "",
     "format-window-separator": " ",
     "format-icons": {
       "1": "",
@@ -112,8 +111,9 @@
       "default": "",
       "special": ""
     },
+    "window-rewrite": {},
     "workspace-taskbar": {
-      "enable": true,
+      "enable": false,
       "update-active-window": true,
       "format": "{icon}",
       "icon-theme": ["Papirus-Dark", "Papirus"],
@@ -255,5 +255,5 @@
       "paused": "",
       "stopped": ""
     }
-  },
+  }
 }
