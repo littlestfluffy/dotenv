@@ -6,6 +6,7 @@
 !/.config/hypr
 /.config/hypr/settings.conf
 /.config/hypr/monitors.conf
+/.config/hypr/rules.conf
 /.config/hypr/workspaces.conf
 !/.config/rofi
 !/.config/systemd
