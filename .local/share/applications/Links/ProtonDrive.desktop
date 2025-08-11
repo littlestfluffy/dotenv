@@ -2,6 +2,6 @@
 Version=1.0
 Name=Proton Drive
 URL=https://drive.proton.me/
-Icon=proton-mail
+Icon=~/.local/share/applications/Links/ProtonDrive.svg
 Type=Link
 
