@@ -91,3 +91,16 @@ sudo pacman -S textpieces
 ```shell
 yay -S power-profiles-daemon # Power Utilities
 ```
+
+## Live Wallpaper support
+
+Services works well with `waypaper`. You can choose your backend, i.e. `swww` (images) or `mpvpaper` (videos).
+
+```shell
+yay -S mpvpaper waypaper
+```
+
+Optionally enable the following service to pause the live wallpaper(s) when a fullscreen window is active for better GPU/FPS performance:
+```shell
+systemctl --user enable --now mpv-fullscreen.timer
+```
