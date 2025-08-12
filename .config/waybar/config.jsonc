@@ -13,7 +13,8 @@
   // Choose the order of the modules
   "modules-left": [
     "custom/launcher",
-    "hyprland/workspaces"
+    "hyprland/workspaces",
+    "gamemode"
 //    "mpris"
   ],
 //  "modules-center": [
@@ -34,6 +35,14 @@
     "custom/notification",
     "group/group-power"
   ],
+  "gamemode": {
+    "format": "{glyph} {count}",
+    "glyph": "<b></b>",
+    "hide-not-running": true,
+    "use-icon": false,
+    "tooltip": true,
+    "tooltip-format": "Games running: {count}"
+  },
   "power-profiles-daemon": {
     "format": "{icon}",
     "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
@@ -120,7 +129,6 @@
       "8": "",
       "9": "",
       "10": "",
-      "default": "",
       "special": ""
     },
     "window-rewrite": {},
