@@ -1,0 +1,10 @@
+[Unit]
+Description=Check for full screen session
+
+[Timer]
+OnCalendar=*:*:0/5
+AccuracySec=5s
+Unit=%i.service
+
+[Install]
+WantedBy=timers.target

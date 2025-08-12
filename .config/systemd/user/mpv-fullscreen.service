@@ -1,0 +1,13 @@
+[Unit]
+Description=Pausing mpvpaper on fullscren
+PartOf=graphical-session.target
+After=graphical-session.target
+ConditionEnvironment=WAYLAND_DISPLAY
+
+[Service]
+Type=simple
+WorkingDirectory=%h
+ExecStart=/usr/bin/env bash -c "~/.config/hypr/scripts/mpv-fullscreen-pause.sh"
+
+[Install]
+WantedBy=graphical-session.target
