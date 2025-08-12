@@ -7,7 +7,7 @@ ConditionEnvironment=WAYLAND_DISPLAY
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/swww-daemon
+ExecStart=/usr/bin/swww-daemon --no-cache
 Restart=always
 
 [Install]
