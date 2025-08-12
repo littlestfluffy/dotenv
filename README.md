@@ -104,3 +104,9 @@ Optionally enable the following service to pause the live wallpaper(s) when a fu
 ```shell
 systemctl --user enable --now mpv-fullscreen.timer
 ```
+
+### Update Notification
+
+```shell
+yay -S waybar-updates
+```

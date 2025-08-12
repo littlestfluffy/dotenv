@@ -32,9 +32,20 @@
     "bluetooth",
     "network",
     "clock",
+    "custom/pacman",
     "custom/notification",
     "group/group-power"
   ],
+  "custom/pacman": {
+    "format": "{icon}{0}",
+    "return-type": "json",
+    "format-icons": {
+      "pending-updates": " ",
+      "updated": ""
+    },
+    "exec-if": "which waybar-updates",
+    "exec": "waybar-updates"
+  },
   "gamemode": {
     "format": "{glyph} {count}",
     "glyph": "<b></b>",
