@@ -18,47 +18,19 @@ Prepare dotenv configs from git repository
 ```shell
 git init
 git remote add origin https://github.com/littlestfluffy/dotenv.git
-git fetch
-rm .bashrc #remove auto-generated `.bashrc`
-git checkout main
+git fetch origin
+git checkout --force main
 ```
 
-### Core Utilities
+### Packages
+
+#### Core Packages
 
 ```shell
-sudo pacman -S which wget curl 
-sudo pacman -S hyprland hypridle hyprlock hyprpolkitagent hyprshot foot fish nautilus
-sudo pacman -S uwsm libnewt
-sudo pacman -S otf-font-awesome noto-fonts noto-fonts-extra noto-fonts-emoji noto-fonts-cjk papirus-icon-theme
-sudo pacman -S waybar swaync xdg-desktop-portal-hyprland
-sudo pacman -S gnome-keyring openssh
-sudo pacman -S nwg-displays
+sudo pacman -S --needed  - < ~/.config/pacman/core.list
 ```
 
-#### Sound System
-
-If you're using a laptop you likely also need to install the `sof-firmware` package.
-
-```shell
-sudo pacman -S pipewire wireplumber pipewire-pulse pipewire-alsa pavucontrol
-```
-
-#### NVIDIA GPU Drivers
-
-Ensure to enable the `multilib` repository in `/etc/pacman.conf` before installing.
-
-```shell
-sudo pacman -S nvidia-open nvidia-utils lib32-nvidia-utils
-```
-
-#### Bluetooth
-
-```shell
-sudo pacman -S bluez blueman
-sudo systemctl enable --now bluetooth.service
-```
-
-### Yay Package Manager
+#### Yay Package Manager
 
 ```shell
 sudo pacman -S --needed git base-devel 
@@ -67,16 +39,36 @@ cd yay-bin
 makepkg -si
 ```
 
+#### Audio System
+
+If you're using a laptop you likely also need to manually install the `sof-firmware` package.
+
+#### NVIDIA GPU Drivers
+
+Ensure to enable the `multilib` repository in `/etc/pacman.conf` before installing.
+
+```shell
+sudo pacman -S --needed  - < ~/.config/pacman/nvidia.list
+```
+
+#### Bluetooth
+
+```shell
+sudo systemctl enable --now bluetooth.service
+```
+
+
 #### Network Manager GUI
 
 ```shell
-sudo yay -S nmgui-bin nm-connection-editor
+sudo yay -S nmgui-bin
 ```
 
 ### User Utilities
 
 ```shell
-sudo pacman -S qalculate-gtk        # calculator
+sudo pacman -S qalculate-gtk
+
 # Other tools (browser)
 sudo pacman -S vivaldi vivaldi-ffmpeg-codecs libxdamage
 sudo pacman -S firefox
@@ -86,10 +78,6 @@ sudo pacman -S celluloid
 
 # Notepad/scratch pad
 sudo pacman -S textpieces
-```
-
-```shell
-yay -S power-profiles-daemon # Power Utilities
 ```
 
 ## Live Wallpaper support

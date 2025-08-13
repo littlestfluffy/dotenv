@@ -8,6 +8,7 @@
 /.config/hypr/monitors.conf
 /.config/hypr/rules.conf
 /.config/hypr/workspaces.conf
+!/.config/pacman
 !/.config/rofi
 !/.config/systemd
 /.config/systemd/*
