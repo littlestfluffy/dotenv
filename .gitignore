@@ -1,6 +1,7 @@
 /*
 !/.config
 /.config/*
+!/.config/alacritty
 !/.config/fontconfig
 !/.config/foot
 !/.config/hypr
