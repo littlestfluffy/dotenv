@@ -23,7 +23,6 @@
   "modules-right": [
     "group/group-tray",
     "pulseaudio",
-//    "hyprland/language",
     "bluetooth",
     "network",
     "custom/pacman",
@@ -76,7 +75,11 @@
       "transition-duration": 600,
       "transition-left-to-right": false
     },
-    "modules": ["custom/power","power-profiles-daemon"]
+    "modules": [
+      "custom/power",
+      "hyprland/language",
+      "power-profiles-daemon"
+    ]
   },
   "custom/power": {
     "format": "",
@@ -175,7 +178,7 @@
     ]
   },
   "hyprland/language": {
-    "format": " {}",
+    "format": "{}",
     "format-en": "🇺🇸",
     "format-ru": "🇷🇺"
   },
