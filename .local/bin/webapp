@@ -1,6 +1,0 @@
-#!/bin/bash
-# ~/bin/rofi-run-webapp
-
-cmd=$(echo "$@" | sed 's/--app= */--app=/')
-exec $cmd
-

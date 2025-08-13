@@ -98,3 +98,43 @@ systemctl --user enable --now mpv-fullscreen.timer
 ```shell
 yay -S waybar-updates
 ```
+
+## Webapps
+
+You can enable certain webapp "repositories" with command:
+
+### List/Enabling available applications
+
+```shell
+ls -1 ~/.config/webapp/disabled
+# chatgpt
+# discord
+# microsoft
+# proton
+# spotify
+# telegram
+# whatsapp
+# youtube
+```
+
+```shell
+cd ~/.config/webapp/
+ls -sf ./disabled/<name> .
+```
+
+### Adding your own
+
+Just add a file (i.e. `example`) to `~/.config/webapp` in the following format:
+
+```shell
+DISPLAY NAME|URL|ICON
+
+i.e.:
+Custom Item 1|https://example.org/|application-community
+Custom Item 2|https://example.com/|~/.local/share/icons/apps/CustomItem.svg
+```
+
+Icon names can be found with i.e.:
+```shell
+find /usr/share/icons/Papirus/16x16/apps -iname "*QUERY*"
+```

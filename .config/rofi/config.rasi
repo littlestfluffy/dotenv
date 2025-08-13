@@ -12,6 +12,7 @@ configuration {
 	modi:                       "drun";
     show-icons:                 true;
     icon-theme:                 "Papirus-Dark";
+    display-combi:              "";
     display-drun:               "";
     display-run:                "";
     display-filebrowser:        "";
