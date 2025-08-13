@@ -23,26 +23,21 @@
   "modules-right": [
     "group/group-tray",
     "pulseaudio",
-//    "temperature",
-    "cpu",
-    "memory",
 //    "hyprland/language",
-    "battery",
-    "battery#bat2",
     "bluetooth",
     "network",
-    "clock",
     "custom/pacman",
-    "power-profiles-daemon",
+    "battery",
     "custom/notification",
-    "custom/power"
+    "clock",
+    "group/power-control"
   ],
   "custom/pacman": {
     "format": "{icon}{0}",
     "return-type": "json",
     "format-icons": {
       "pending-updates": " ",
-      "updated": ""
+      "updated": ""
     },
     "exec-if": "which waybar-updates",
     "exec": "waybar-updates"
@@ -74,6 +69,14 @@
       "transition-left-to-right": true
     },
     "modules": ["custom/menu","tray"]
+  },
+  "group/power-control": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 600,
+      "transition-left-to-right": false
+    },
+    "modules": ["custom/power","power-profiles-daemon"]
   },
   "custom/power": {
     "format": "",
@@ -121,7 +124,6 @@
       "update-active-window": true,
       "format": "{icon}",
       "icon-theme": ["Papirus-Dark", "Papirus"],
-//      "ignore-list": [ "Vivaldi-stable", "Firefox - .*" ],
       "on-click-window": "hyprctl dispatch focuswindow address:{address}"
     }
   },
@@ -172,21 +174,6 @@
       ""
     ]
   },
-  "cpu": {
-    "interval": 1,
-    "format": " {usage}%"
-  },
-  "memory": {
-    "interval": 1,
-    "format": " {percentage}%"
-  },
-  "temperature": {
-    "interval": 1,
-    "hwmon-path": "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon1/temp1_input",
-    "critical-threshold": 80,
-    "format-critical": " {temperatureC}",
-    "format": " {temperatureC}°C"
-  },
   "hyprland/language": {
     "format": " {}",
     "format-en": "🇺🇸",
@@ -214,7 +201,7 @@
     "bat": "BAT2"
   },
   "clock": {
-    "format": " {:%H:%M}",
+    "format": "{:%H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": " {:%Y-%m-%d}"
   },
