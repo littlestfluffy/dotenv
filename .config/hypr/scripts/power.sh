@@ -9,7 +9,7 @@ EOF
 choice=$(printf "$options" | rofi -dmenu -theme "power-menu" -hide-scrollbar)
 
 case "$choice" in
-	"Power off"        ) echo shutdown now ;;
-	"Reboot"        ) echo reboot ;;
-	"Log out"        ) echo hyprctl dispatch exit ;;
+	"Power off"        ) shutdown now ;;
+	"Reboot"        ) reboot ;;
+	"Log out"        ) hyprctl dispatch exit ;;
 esac
