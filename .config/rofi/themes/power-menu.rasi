@@ -1,0 +1,37 @@
+@import "./default"
+
+
+window {
+   children: [listview];
+   fullscreen: true;
+   background-color: rgba(0, 0, 0, 0.9);
+    location:                    center;
+    anchor:                      center;
+    x-offset:                    0px;
+    y-offset:                    0px;
+}
+
+element {
+    orientation: vertical;
+    children: [element-icon, element-text];
+    padding: 5%;
+}
+
+
+element-text {
+    font: "Noto Sans Mono SemiBold 24";
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    spacing: 1%;
+}
+
+element-icon {
+    size: 128px;
+}
+
+listview {
+    padding: 30% 20%;
+	flow: horizontal;
+	columns: 3;
+    scrollbar: false;
+}

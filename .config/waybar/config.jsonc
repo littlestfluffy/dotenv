@@ -33,8 +33,9 @@
     "network",
     "clock",
     "custom/pacman",
+    "power-profiles-daemon",
     "custom/notification",
-    "group/group-power"
+    "custom/power"
   ],
   "custom/pacman": {
     "format": "{icon}{0}",
@@ -74,38 +75,10 @@
     },
     "modules": ["custom/menu","tray"]
   },
-  "group/group-power": {
-    "orientation": "inherit",
-    "drawer": {
-      "click-to-reveal": true,
-      "transition-left-to-right": false
-    },
-    "modules": [
-      "custom/power-control",
-      "custom/power",
-      "custom/reboot",
-      "custom/lock",
-      "power-profiles-daemon"
-    ]
-  },
-  "custom/power-control": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/lock": {
-    "format": "",
-    "tooltip-format": "Lock Session",
-    "on-click": "loginctl lock-session"
-  },
-  "custom/reboot": {
-    "format": "",
-    "tooltip-format": "Reboot System",
-    "on-click": "reboot"
-  },
   "custom/power": {
     "format": "",
     "tooltip-format": "Shutdown System",
-    "on-click": "shutdown now"
+    "on-click": "~/.config/hypr/scripts/power.sh"
   },
   "custom/menu":{
     "format": ""
