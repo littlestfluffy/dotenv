@@ -1,15 +1,19 @@
 
 options=$(cat <<EOF
-Power off\0icon\x1fsystem-shutdown
+Shutdown\0icon\x1fsystem-shutdown
 Reboot\0icon\x1fsystem-reboot
-Log out\0icon\x1fsystem-log-out
+Log Out\0icon\x1fsystem-log-out
+Sleep\0icon\x1fsystem-suspend
+Lock\0icon\x1fsystem-lock-screen
 EOF
 )
 
 choice=$(printf "$options" | rofi -dmenu -theme "power-menu" -hide-scrollbar)
 
 case "$choice" in
-	"Power off"        ) shutdown now ;;
-	"Reboot"        ) reboot ;;
-	"Log out"        ) hyprctl dispatch exit ;;
+	"Shutdown"    ) shutdown now ;;
+	"Reboot"      ) reboot ;;
+	"Log out"     ) hyprctl dispatch exit ;;
+  "Sleep"       ) systemctl suspend ;;
+  "Lock"        ) loginctl lock-session ;;
 esac

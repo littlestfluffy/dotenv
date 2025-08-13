@@ -14,24 +14,25 @@ window {
 element {
     orientation: vertical;
     children: [element-icon, element-text];
-    padding: 5%;
+    padding: 5% 1%;
 }
 
 
 element-text {
-    font: "Noto Sans Mono SemiBold 24";
+    font: "Noto Sans Mono SemiBold 18";
     vertical-align: 0.5;
     horizontal-align: 0.5;
     spacing: 1%;
 }
 
 element-icon {
-    size: 128px;
+    size: 64px;
 }
 
 listview {
-    padding: 30% 20%;
+    padding: 40% 1%;
+    margin: 0 20%;
 	flow: horizontal;
-	columns: 3;
+	columns: 5;
     scrollbar: false;
 }
