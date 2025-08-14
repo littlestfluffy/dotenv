@@ -270,6 +270,7 @@ mode-switcher{
     border-color:                @border-colour;
     background-color:            transparent;
     text-color:                  @foreground-colour;
+    width:                       200px;
 }
 button {
     padding:                     5px 10px;

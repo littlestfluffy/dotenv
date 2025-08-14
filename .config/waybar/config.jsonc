@@ -14,8 +14,8 @@
   "modules-left": [
     "custom/launcher",
     "hyprland/workspaces",
-    "gamemode"
-//    "mpris"
+    "gamemode",
+    "mpris"
   ],
 //  "modules-center": [
 //
@@ -228,21 +228,17 @@
     "on-click": "swaync-client -t -sw",
     "escape": true
   },
-//  "custom/mpris": {
-//    "exec": "python3 -u ~/.config/hypr/scripts/scrolling-mpris.py",
-//    "format": "{text}",
-//    "return-type": "json",
-//    "on-click": "playerctl play-pause"
-//  },
   "mpris": {
     "interval": 1,
-    "format": "{status_icon} [<b>{title}</b> <span alpha='60%'>by</span> {artist} <span alpha='60%'>on</span> {album} <span alpha='60%'>[{position}/{length}]</span>",
-//    "dynamic-order": ["artist", "title", "album", "position", "length"],
-    //    "format-paused": "{status_icon} <b>{title}</b> <span alpha='60%'>by</span> {artist} <span alpha='60%'>on</span> {album} <span alpha='60%'>[{position}/{length}]</span>",
+    "format": "{status_icon} <b>{title}</b> <span alpha='60%'>by</span> {artist} <span alpha='60%'>on</span> {album} <span alpha='60%'>[{position}/{length}]</span>",
+    "on-click-middle": "",
     "player-icons": {
       "default": ""
     },
-    "player-len": 25,
+    "title-len": 20,
+    "artist-len": 20,
+    "album-len": 20,
+    "enable-tooltip-len-limits": true,
     "ellipsis": ".",
     "status-icons": {
       "playing": "",
