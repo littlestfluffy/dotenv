@@ -7,6 +7,9 @@ padding = { x = 5, y = 0 }
 [font]
 size = 10.0
 
+[selection]
+save_to_clipboard = true
+
 [env]
 TERM = "xterm-256color"
 

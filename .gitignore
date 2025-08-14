@@ -3,7 +3,6 @@
 /.config/*
 !/.config/alacritty
 !/.config/fontconfig
-!/.config/foot
 !/.config/hypr
 /.config/hypr/settings.conf
 /.config/hypr/monitors.conf

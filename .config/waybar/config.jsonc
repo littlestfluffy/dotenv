@@ -14,8 +14,8 @@
   "modules-left": [
     "custom/launcher",
     "hyprland/workspaces",
-    "gamemode"
-//    "mpris"
+    "gamemode",
+    "group/group-media"
   ],
 //  "modules-center": [
 //
@@ -23,7 +23,6 @@
   "modules-right": [
     "group/group-tray",
     "pulseaudio",
-//    "hyprland/language",
     "bluetooth",
     "network",
     "custom/pacman",
@@ -61,6 +60,15 @@
       "power-saver": ""
     }
   },
+  "group/group-media": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 600,
+      "transition-left-to-right": true,
+      "click-to-reveal": true
+    },
+    "modules": ["mpris", "mpris#extended"]
+  },
   "group/group-tray": {
     "orientation": "inherit",
     "drawer": {
@@ -76,7 +84,11 @@
       "transition-duration": 600,
       "transition-left-to-right": false
     },
-    "modules": ["custom/power","power-profiles-daemon"]
+    "modules": [
+      "custom/power",
+      "hyprland/language",
+      "power-profiles-daemon"
+    ]
   },
   "custom/power": {
     "format": "",
@@ -175,7 +187,7 @@
     ]
   },
   "hyprland/language": {
-    "format": " {}",
+    "format": "{}",
     "format-en": "🇺🇸",
     "format-ru": "🇷🇺"
   },
@@ -225,26 +237,26 @@
     "on-click": "swaync-client -t -sw",
     "escape": true
   },
-//  "custom/mpris": {
-//    "exec": "python3 -u ~/.config/hypr/scripts/scrolling-mpris.py",
-//    "format": "{text}",
-//    "return-type": "json",
-//    "on-click": "playerctl play-pause"
-//  },
   "mpris": {
     "interval": 1,
-    "format": "{status_icon} [<b>{title}</b> <span alpha='60%'>by</span> {artist} <span alpha='60%'>on</span> {album} <span alpha='60%'>[{position}/{length}]</span>",
-//    "dynamic-order": ["artist", "title", "album", "position", "length"],
-    //    "format-paused": "{status_icon} <b>{title}</b> <span alpha='60%'>by</span> {artist} <span alpha='60%'>on</span> {album} <span alpha='60%'>[{position}/{length}]</span>",
+    "format": "{status_icon} <span alpha='60%'>[{position}/{length}]</span> <b>{title}</b>",
     "player-icons": {
       "default": ""
     },
-    "player-len": 25,
-    "ellipsis": ".",
     "status-icons": {
       "playing": "",
       "paused": "",
       "stopped": ""
+    }
+  },
+  "mpris#extended": {
+    "interval": 1,
+    "format": "<span alpha='60%'>by</span> {artist} <span alpha='60%'>on</span> {album}",
+    "on-click": "",
+    "on-click-middle": "",
+    "on-click-right": "",
+    "player-icons": {
+      "default": ""
     }
   }
 }

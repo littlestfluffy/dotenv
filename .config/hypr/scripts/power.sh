@@ -13,7 +13,7 @@ choice=$(printf "$options" | rofi -dmenu -theme "power-menu" -hide-scrollbar)
 case "$choice" in
 	"Shutdown"    ) shutdown now ;;
 	"Reboot"      ) reboot ;;
-	"Log out"     ) hyprctl dispatch exit ;;
+	"Log Out"     ) hyprctl dispatch exit ;;
   "Sleep"       ) systemctl suspend ;;
   "Lock"        ) loginctl lock-session ;;
 esac
