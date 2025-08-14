@@ -103,7 +103,7 @@ yay -S waybar-updates
 
 You can enable certain webapp "repositories" with command:
 
-### List/Enabling available app
+### List available apps
 
 ```shell
 ls -1 ~/.config/webapp/disabled
