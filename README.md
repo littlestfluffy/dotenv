@@ -103,7 +103,7 @@ yay -S waybar-updates
 
 You can enable certain webapp "repositories" with command:
 
-### List/Enabling available applications
+### List/Enabling available app
 
 ```shell
 ls -1 ~/.config/webapp/disabled
@@ -117,14 +117,16 @@ ls -1 ~/.config/webapp/disabled
 # youtube
 ```
 
+### Enable app (from disabled list)
+
 ```shell
 cd ~/.config/webapp/
-ls -sf ./disabled/<name> .
+ln -sf ./disabled/<name> .
 ```
 
-### Adding your own
+### Adding apps
 
-Just add a file (i.e. `example`) to `~/.config/webapp` in the following format:
+Add a file (i.e. `example`) to `~/.config/webapp` in the following format:
 
 ```shell
 DISPLAY NAME|URL|ICON
