@@ -31,3 +31,4 @@
 /.local/share/backgrounds/default
 !/.local/share/icons
 !/README.md
+!/confbak.sh
