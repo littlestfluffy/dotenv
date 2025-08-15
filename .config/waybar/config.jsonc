@@ -253,7 +253,7 @@
     "interval": 1,
     "format": "<span alpha='60%'>by</span> {artist} <span alpha='60%'>on</span> {album}",
     "on-click": "",
-    "on-click-middle": "",
+    "on-click-middle": "playerctl metadata --format 'is listening to: {{ title }} by {{ artist }} on {{ album }}' | wl-copy -n",
     "on-click-right": "",
     "player-icons": {
       "default": ""
