@@ -128,7 +128,7 @@ yay -S waybar-updates
 	cp ~/.config/storeBackup/storeBackup.example.conf ~/.config/storeBackup/storeBackup.conf
 	```
 
-	> Contains sane defaults with the exception of the destination directory where the backups have to be written to (by default: `/tmp/destination`):
+	> Contains sane defaults _except_ for the destination directory (by default: `/tmp/destination`):
 
 
 3. Change the configuration settings to your own:
@@ -137,22 +137,22 @@ yay -S waybar-updates
 	vim ~/.config/storeBackup/storeBackup.conf
 	```
 
-	> Ensure to at least change the default `/tmp/destination` to a location that makes more sence (e.g. external drive with a filesystem that supports hardlinking).
+	> Ensure to _change_ the default `backupDir=/tmp/destination` to a directory on a location that makes more sence (e.g. external drive with a _hardlink supporitng_ filesystem).
 
-4. Add symbolic links to the source directoriesi (the directories containing the data that has to be backupped):
+4. Add symbolic links to the source directories (containing the data to be backupped):
 
 	```
 	ln -s <path>/<to>/<source>/<directory> ~/.config/storeBackup/source/
 	```
 
-5. Do the first backup (from your homedir!):
+5. Do the first backup _from your homedir_:
 	
 	```shell
 	cd ~/ && \n
 	storeBackup.pl -f ~/.config/storeBackup/storeBackup.conf
 	```
 	
-	> *NB:* Command has to be run from your homedir (otherwise storeBackup can not locate the configfile!
+	> **NB:** Command _has_ to be run _from your homedir_ (otherwise storeBackup can not locate the configfile!
 
 
 ## Webapps
