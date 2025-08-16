@@ -146,12 +146,12 @@ yay -S waybar-updates
 	```
 
 5. Do the first backup (from your homedir!):
-
+	
 	```shell
-  cd ~/ && \n
+	cd ~/ && \n
 	storeBackup.pl -f ~/.config/storeBackup/storeBackup.conf
 	```
-
+	
 	> *NB:* Command has to be run from your homedir (otherwise storeBackup can not locate the configfile!
 
 
