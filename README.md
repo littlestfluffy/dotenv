@@ -22,15 +22,13 @@ git fetch origin
 git checkout --force main
 ```
 
-## Packages
-
-### Core Packages
+## Core Packages
 
 ```shell
 sudo pacman -S --needed  - < ~/.config/pacman/core.list
 ```
 
-#### Yay Package Manager
+### Yay Package Manager
 
 ```shell
 sudo pacman -S --needed git base-devel 
@@ -39,11 +37,11 @@ cd yay-bin
 makepkg -si
 ```
 
-#### Audio System
+### Audio System
 
 If you're using a laptop you likely also need to manually install the `sof-firmware` package.
 
-#### NVIDIA GPU Drivers
+### NVIDIA GPU Drivers
 
 Ensure to enable the `multilib` repository in `/etc/pacman.conf` before installing.
 
@@ -51,31 +49,31 @@ Ensure to enable the `multilib` repository in `/etc/pacman.conf` before installi
 sudo pacman -S --needed  - < ~/.config/pacman/nvidia.list
 ```
 
-#### Bluetooth
+### Bluetooth
 
 ```shell
 sudo systemctl enable --now bluetooth.service
 ```
 
 
-#### Network Manager GUI
+### Network Manager GUI
 
 ```shell
 sudo yay -S nmgui-bin
 ```
 
-### User Utilities
+## Extra packages (user utilities)
 
-#### Pacman based
+### Pacman based
 
-##### All at once
+#### All at once
 
 ```shell
 # All adviced extras
 sudo pacman -S --needed  - < ~/.config/pacman/extras.list
 ```
 
-##### Individually
+#### Individually
 
 ```shell
 # Video player
@@ -95,9 +93,9 @@ sudo pacman -S qalculate-gtk
 sudo pacman -S textpieces
 ```
 
-#### Yay based
+### Yay based
 
-##### Live Wallpaper support
+#### Live Wallpaper support
 
 Services works well with `waypaper`. You can choose your backend, i.e. `swww` (images) or `mpvpaper` (videos).
 
