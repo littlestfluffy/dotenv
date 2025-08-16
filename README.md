@@ -137,7 +137,7 @@ yay -S waybar-updates
 	vim ~/.config/storeBackup/storeBackup.conf
 	```
 
-	> Ensure to _change_ the default `backupDir=/tmp/destination` to a directory on a location that makes sense (e.g. external drive with a _hardlink supporting_ filesystem as otherwise each backup takes up _full_ space instead of only incrementally for changes the rest being hardlinked).
+	> Ensure to _change_ the default `backupDir=/tmp/destination` to a directory on a location that makes sense (e.g. external drive with a _hardlink supporting_ filesystem as otherwise each backup takes up _full_ space instead of only incrementally for changes; the rest being hardlinked).
 
 4. Add symbolic links to the source directories (containing the data to be backupped):
 
