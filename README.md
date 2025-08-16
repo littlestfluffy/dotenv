@@ -151,7 +151,8 @@ Custom Item 1|https://example.org/|application-community
 Custom Item 2|https://example.com/|~/.local/share/icons/apps/CustomItem.svg
 ```
 
-Icon names can be found with i.e.:
-```shell
-find /usr/share/icons/Papirus/16x16/apps -iname "*QUERY*"
-```
+> Icon names can be found with i.e.:
+>
+> ```shell
+> find /usr/share/icons/Papirus/16x16/apps -iname "*QUERY*"
+> ```
