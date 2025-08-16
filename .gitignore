@@ -10,6 +10,12 @@
 /.config/hypr/workspaces.conf
 !/.config/pacman
 !/.config/rofi
+!/.config/storeBackup
+/.config/storeBackup/*
+!/.config/storeBackup/source
+/.config/storeBackup/source/*
+!/.config/storeBackup/source/.gitkeep
+!/.config/storeBackup/storeBackup.example.conf
 !/.config/systemd
 /.config/systemd/*
 !/.config/systemd/user
