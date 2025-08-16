@@ -114,6 +114,47 @@ systemctl --user enable --now mpv-fullscreen.timer
 yay -S waybar-updates
 ```
 
+#### Backups
+
+1. Install application:
+
+	```shell
+	yay -S storebackup
+	```
+
+2. Copy the example configuration file:
+
+	```shell
+	cp ~/.config/storeBackup/storeBackup.example.conf ~/.config/storeBackup/storeBackup.conf
+	```
+
+	> Contains sane defaults with the exception of the destination directory where the backups have to be written to (by default: `/tmp/destination`):
+
+
+3. Change the configuration settings to your own:
+
+	```shell
+	vim ~/.config/storeBackup/storeBackup.conf
+	```
+
+	> Ensure to at least change the default `/tmp/destination` to a location that makes more sence (e.g. external drive with a filesystem that supports hardlinking).
+
+4. Add symbolic links to the source directoriesi (the directories containing the data that has to be backupped):
+
+	```
+	ln -s <path>/<to>/<source>/<directory> ~/.config/storeBackup/source/
+	```
+
+5. Do the first backup (from your homedir!):
+
+	```shell
+  cd ~/ && \n
+	storeBackup.pl -f ~/.config/storeBackup/storeBackup.conf
+	```
+
+	> *NB:* Command has to be run from your homedir (otherwise storeBackup can not locate the configfile!
+
+
 ## Webapps
 
 You can enable certain webapp "repositories" with command:
