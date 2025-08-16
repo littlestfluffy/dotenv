@@ -22,9 +22,9 @@ git fetch origin
 git checkout --force main
 ```
 
-### Packages
+## Packages
 
-#### Core Packages
+### Core Packages
 
 ```shell
 sudo pacman -S --needed  - < ~/.config/pacman/core.list
@@ -66,21 +66,38 @@ sudo yay -S nmgui-bin
 
 ### User Utilities
 
-```shell
-sudo pacman -S qalculate-gtk
+#### Pacman based
 
-# Other tools (browser)
+##### All at once
+
+```shell
+# All adviced extras
+sudo pacman -S --needed  - < ~/.config/pacman/extras.list
+```
+
+##### Individually
+
+```shell
+# Video player
+sudo pacman -S celluloid          
+
+# Web browser
 sudo pacman -S vivaldi vivaldi-ffmpeg-codecs libxdamage
 sudo pacman -S firefox
 
-# Video player
-sudo pacman -S celluloid          
+# Disk usage analysis 
+sudo pacman -S ncdu
+
+# Calculator
+sudo pacman -S qalculate-gtk
 
 # Notepad/scratch pad
 sudo pacman -S textpieces
 ```
 
-## Live Wallpaper support
+#### Yay based
+
+##### Live Wallpaper support
 
 Services works well with `waypaper`. You can choose your backend, i.e. `swww` (images) or `mpvpaper` (videos).
 
@@ -93,7 +110,7 @@ Optionally enable the following service to pause the live wallpaper(s) when a fu
 systemctl --user enable --now mpv-fullscreen.timer
 ```
 
-### Update Notification
+#### Update Notification
 
 ```shell
 yay -S waybar-updates
