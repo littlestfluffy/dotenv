@@ -81,7 +81,6 @@ sudo pacman -S celluloid
 
 # Web browser
 sudo pacman -S vivaldi vivaldi-ffmpeg-codecs libxdamage
-sudo pacman -S firefox
 
 # Disk usage analysis 
 sudo pacman -S ncdu
