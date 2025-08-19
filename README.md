@@ -66,30 +66,13 @@ sudo yay -S nmgui-bin
 
 ### Pacman based
 
-#### All at once
-
 ```shell
-# All adviced extras
+# Small utils
 sudo pacman -S --needed  - < ~/.config/pacman/extras.list
-```
 
-#### Individually
-
-```shell
-# Video player
-sudo pacman -S celluloid          
-
-# Web browser
-sudo pacman -S vivaldi vivaldi-ffmpeg-codecs libxdamage
-
-# Disk usage analysis 
-sudo pacman -S ncdu
-
-# Calculator
-sudo pacman -S qalculate-gtk
-
-# Notepad/scratch pad
-sudo pacman -S textpieces
+# web browsers
+sudo pacman -S --needed  - < ~/.config/pacman/chromium.list
+sudo pacman -S --needed  - < ~/.config/pacman/vivaldi.list
 ```
 
 ### Yay based
