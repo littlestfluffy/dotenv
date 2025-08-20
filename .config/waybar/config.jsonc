@@ -213,8 +213,8 @@
     "bat": "BAT2"
   },
   "clock": {
-    "format": "{:L%R}",
-    "format-alt": "{:L%A, %B %d, %Y, %R}",
+    "format": "{:L%b %d (w%W) %R}",
+    "format-alt": "{:L%R}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
       "mode"          : "month",
