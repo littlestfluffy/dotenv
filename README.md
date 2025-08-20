@@ -64,20 +64,17 @@ sudo yay -S nmgui-bin
 
 ## Extra packages (user utilities)
 
-### Pacman based
-
 ```shell
 # Small utils
 sudo pacman -S --needed  - < ~/.config/pacman/extras.list
 
 # web browsers
-sudo pacman -S --needed  - < ~/.config/pacman/chromium.list
+sudo yay -S --needed  - < ~/.config/yay/chromium.list
 sudo pacman -S --needed  - < ~/.config/pacman/vivaldi.list
 ```
 
-### Yay based
 
-#### Live Wallpaper support
+## Live Wallpaper support
 
 Services works well with `waypaper`. You can choose your backend, i.e. `swww` (images) or `mpvpaper` (videos).
 
@@ -90,13 +87,13 @@ Optionally enable the following service to pause the live wallpaper(s) when a fu
 systemctl --user enable --now mpv-fullscreen.timer
 ```
 
-#### Update Notification
+### Update Notification
 
 ```shell
 yay -S waybar-updates
 ```
 
-#### Backups
+### Backups
 
 1. Install application:
 
