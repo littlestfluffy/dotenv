@@ -38,6 +38,9 @@
 /.local/share/*
 !/.local/share/backgrounds
 /.local/share/backgrounds/default
+!/.local/share/ungoogled-chromium
+/.local/share/ungoogled-chromium/*
+!/.local/share/ungoogled-chromium/spellingscheck
 !/.local/share/icons
 !/README.md
 !/confbak.sh
