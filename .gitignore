@@ -41,6 +41,11 @@
 !/.local/share/ungoogled-chromium
 /.local/share/ungoogled-chromium/*
 !/.local/share/ungoogled-chromium/spellingscheck
+/.local/share/ungoogled-chromium/spellingscheck*
+!/.local/share/ungoogled-chromium/spellingscheck/README.MD
+!/.local/share/ungoogled-chromium/spellingscheck/nl-NL-3-0.bdic
+!/.local/share/ungoogled-chromium/spellingscheck/en-GB-10-1.bdic
+!/.local/share/ungoogled-chromium/spellingscheck/en-US-10-1.bdic
 !/.local/share/icons
 !/README.md
 !/confbak.sh
