@@ -188,9 +188,13 @@ Custom Item 2|https://example.com/|~/.local/share/icons/apps/CustomItem.svg
 
 ## Hyperlock crash
 
+### Symptoms
+
+Screen freezes and a dark gray `Hyperland =(` screen of death is presented.
+
 ### Fix:
 
-Adapted from: `Hyperland =(` (screen of death)`
+Adapted from: `Hyperland =(` (screen of death)
 
 ```shell
 hyprctl --instance 0 'dispatch exec hyprlock'
