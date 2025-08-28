@@ -2,6 +2,9 @@
 !/.config
 /.config/*
 !/.config/alacritty
+!/.config/fish
+/.config/fish/*
+!/.config/fish/config.fish
 !/.config/fontconfig
 !/.config/hypr
 /.config/hypr/settings.conf
