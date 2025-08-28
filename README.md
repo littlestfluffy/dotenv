@@ -183,3 +183,16 @@ Custom Item 2|https://example.com/|~/.local/share/icons/apps/CustomItem.svg
 > ```shell
 > find /usr/share/icons/Papirus/16x16/apps -iname "*QUERY*"
 > ```
+
+# Troubleshoopting
+
+## Hyperlock crash
+
+### Fix:
+
+Adapted from: `Hyperland =(` (screen of death)`
+
+```shell
+hyprctl --instance 0 'dispatch exec hyprlock'
+hyprctl --instance 0 'keyword misc:allow_session_lock_restore 1
+```
