@@ -62,6 +62,13 @@ sudo systemctl enable --now bluetooth.service
 sudo yay -S nmgui-bin
 ```
 
+### Network Time Protocol (NTP)
+
+```shell
+timedatectl set-ntp true
+timedatectl status
+```
+
 ## Extra packages (user utilities)
 
 ```shell
