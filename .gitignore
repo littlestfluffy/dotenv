@@ -7,6 +7,8 @@
 !/.config/fish/config.fish
 !/.config/fontconfig
 !/.config/hypr
+/.config/hypr/vivek.png
+/.config/hypr/vivek.old
 /.config/hypr/settings.conf
 /.config/hypr/monitors.conf
 /.config/hypr/rules.conf
