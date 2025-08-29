@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+if [[ $EUID -ne 0 ]]; then
+    echo "❌ This script must be run as root. Try again with:"
+    echo "   sudo ${0}"
+    exit 1
+fi
+
+USERNAME=${1:-${SUDO_USER}}
+
+if [[ "$USERNAME" == "root" ]]; then
+    echo "❌ Cannot configure greetd for root user"
+    exit 1
+fi
+
+pacman -Sq --needed --noconfirm greetd
+
+cat > /etc/greetd/config.toml << EOF
+[terminal]
+vt = 1
+
+[default_session]
+command = "agreety --cmd /bin/sh"
+user = "greeter"
+
+[initial_session]
+command = "Hyprland"
+user = "${USERNAME}"
+EOF
+
+systemctl enable greetd.service
+
+echo "✅ Greetd configured for user: ${USERNAME}"

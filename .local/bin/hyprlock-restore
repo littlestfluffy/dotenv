@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+INSTANCE=${1:-0}
+
+if ! [[ "${INSTANCE}" =~ ^[0-9]+$ ]]; then
+    echo "Error: INSTANCE must be a non-negative integer."
+    echo "Usage: ${0} <instance_number>"
+    exit 1
+fi
+
+hyprctl --instance "${INSTANCE}" "keyword misc:allow_session_lock_restore 1"
+hyprctl --instance "${INSTANCE}" "dispatch exec hyprlock"

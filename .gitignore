@@ -36,6 +36,7 @@
 !/.local
 /.local/*
 !/.local/bin
+!/.local/sbin
 !/.local/docs
 !/.local/share
 /.local/share/*

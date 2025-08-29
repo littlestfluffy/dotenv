@@ -69,6 +69,24 @@ timedatectl set-ntp true
 timedatectl status
 ```
 
+## Optional Installers
+
+### ZRAM (SWAP Space)
+
+Configures (dynamic) swap space based on your current RAM (total / 2) or 4096MB at maximum,
+
+```shell
+sudo ~/.local/sbin/setup-zram
+```
+
+### Greetd (Greeter)
+
+Configures and automatically logins the current user to log into Hyprland.
+
+```shell
+sudo ~/.local/sbin/setup-greetd
+```
+
 ## Extra packages (user utilities)
 
 ```shell
@@ -195,6 +213,14 @@ Screen freezes and a dark gray `Hyperland =(` screen of death is presented.
 ### Fix:
 
 Adapted from: `Hyperland =(` (screen of death)
+
+Run either (automated):
+```shell
+# [instance-id] is optional, defaults to "0" if omitted.
+~/.local/bin/hyprlock-restore [instance-id]
+```
+
+or, manually:
 
 ```shell
 hyprctl --instance 0 'dispatch exec hyprlock'

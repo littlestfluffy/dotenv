@@ -33,8 +33,8 @@ style = "SemiBold"
 
 # Default colors
 [colors.primary]
-background = '#000000'
-foreground = '#ffffff'
+background = '#1a1a1a'
+foreground = '#fafafa'
 
 [colors.cursor]
 text = '#F81CE5'
