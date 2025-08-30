@@ -45,6 +45,7 @@
 /.local/share/*
 !/.local/share/backgrounds
 /.local/share/backgrounds/default
+!/.local/share/icons
 !/.local/share/ungoogled-chromium
 /.local/share/ungoogled-chromium/*
 !/.local/share/ungoogled-chromium/spellingscheck
