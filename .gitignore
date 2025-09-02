@@ -7,6 +7,8 @@
 !/.config/fish/config.fish
 !/.config/fontconfig
 !/.config/hypr
+/.config/hypr/vivek.png
+/.config/hypr/vivek.old
 /.config/hypr/settings.conf
 /.config/hypr/monitors.conf
 /.config/hypr/rules.conf
@@ -33,6 +35,7 @@
 !/.config/yay
 /.config/yay/*
 !/.config/yay/chromium.list
+!/.config/yay/extras.list
 !/.local
 /.local/*
 !/.local/bin
@@ -42,6 +45,7 @@
 /.local/share/*
 !/.local/share/backgrounds
 /.local/share/backgrounds/default
+!/.local/share/icons
 !/.local/share/ungoogled-chromium
 /.local/share/ungoogled-chromium/*
 !/.local/share/ungoogled-chromium/spellingscheck
