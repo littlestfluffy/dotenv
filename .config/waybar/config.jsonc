@@ -14,11 +14,11 @@
   "modules-left": [
     "custom/launcher",
     "hyprland/workspaces",
+    "hyprland/submap",
     "gamemode",
     "group/group-media"
   ],
 //  "modules-center": [
-//
 //  ],
   "modules-right": [
     "group/group-tray",
@@ -106,6 +106,10 @@
   "custom/launcher": {
     "format": "<big></big>",
     "on-click": "bash -c \"$(hyprctl -j binds | jq -r '.[] | select(.description == \"app-launcher\") .arg')\""
+  },
+  "hyprland/submap": {
+    "format": "️ {}",
+    "tooltip": false
   },
   "hyprland/workspaces": {
     "on-click": "activate",
