@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Copy example configs if missing
+[[ ! -f "$HOME/.config/waypaper/config.ini" ]] && cp "$HOME/.config/waypaper/config.example.ini" "$HOME/.config/waypaper/config.ini"
+[[ ! -f "$HOME/.config/hypr/settings.conf" ]] && cp "$HOME/.config/hypr/settings.example.conf" "$HOME/.config/hypr/settings.conf"
+[[ ! -f "$HOME/.config/hypr/rules.conf" ]] && cp "$HOME/.config/hypr/rules.example.conf" "$HOME/.config/hypr/rules.conf"
+
+# Create empty files if missing
+[[ ! -f "$HOME/.config/hypr/monitors.conf" ]] && touch "$HOME/.config/hypr/monitors.conf"
+[[ ! -f "$HOME/.config/hypr/workspaces.conf" ]] && touch "$HOME/.config/hypr/workspaces.conf"
+
+# Launch Hyprland
+exec /usr/bin/Hyprland
