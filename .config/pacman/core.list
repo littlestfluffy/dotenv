@@ -2,6 +2,7 @@ alacritty
 amd-ucode
 blueman
 bluez
+brightnessctl
 firefox
 fish
 git
@@ -27,7 +28,7 @@ pavucontrol
 pipewire-alsa
 pipewire-pulse
 power-profiles-daemon
-rofi-wayland
+rofi
 socat
 sudo
 swaync

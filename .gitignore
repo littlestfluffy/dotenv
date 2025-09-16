@@ -6,6 +6,7 @@
 /.config/fish/*
 !/.config/fish/config.fish
 !/.config/fontconfig
+!/.config/home-manager
 !/.config/hypr
 /.config/hypr/vivek.png
 /.config/hypr/vivek.old
