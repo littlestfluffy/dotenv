@@ -4,6 +4,13 @@ Wants=graphical-session.target
 After=graphical-session.target
 
 [Service]
+ExecStartPre=-/bin/sh -c 'test ! -f ~/.config/waypaper/config.ini && cp ~/.config/waypaper/config.example.ini ~/.config/waypaper/config.ini'
+ExecStartPre=-/bin/sh -c 'test ! -f ~/.config/hypr/settings.conf && cp ~/.config/hypr/settings.example.conf ~/.config/hypr/settings.conf'
+ExecStartPre=-/bin/sh -c 'test ! -f ~/.config/hypr/rules.conf && cp ~/.config/hypr/rules.example.conf ~/.config/hypr/rules.conf'
+ExecStartPre=-/bin/sh -c 'test ! -f ~/.config/hypr/monitors.conf && touch ~/.config/hypr/monitors.conf'
+ExecStartPre=-/bin/sh -c 'test ! -f ~/.config/hypr/workspaces.conf && touch ~/.config/hypr/workspaces.conf'
+ExecStartPre=-/bin/sh -c 'test ! -f ~/.config/hypr/test.conf && touch ~/.config/hypr/test.conf'
+
 ExecStart=/usr/bin/Hyprland
 Restart=always
 RestartSec=3

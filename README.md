@@ -79,12 +79,12 @@ Configures (dynamic) swap space based on your current RAM (total / 2) or 4096MB 
 sudo ~/.local/sbin/setup-zram
 ```
 
-### Greetd (Greeter)
+### Auto login
 
 Configures and automatically logins the current user to log into Hyprland.
 
 ```shell
-sudo ~/.local/sbin/setup-greetd
+sudo ~/.local/sbin/setup-autologin
 ```
 
 ## Extra packages (user utilities)
