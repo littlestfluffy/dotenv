@@ -27,6 +27,10 @@ ExecStart=
 ExecStart=-/sbin/agetty --autologin $USERNAME --noclear --skip-login --noissue %I \$TERM
 EOF
 
+if [[ -d ~/.config/systemd/user/graphical-session.target.wants ]]; then
+  rm -rf ~/.config/systemd/user/graphical-session.target.wants
+fi
+
 systemctl daemon-reload
 
 echo "✅ Autologin configured for user: ${USERNAME}"
