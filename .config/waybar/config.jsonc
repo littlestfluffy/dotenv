@@ -201,9 +201,10 @@
       "critical": 15
     },
     "events": {
-			"on-discharging-warning": "notify-send -u normal 'Low Battery'",
-		  "on-discharging-critical": "notify-send -u critical 'Very Low Battery'",
-		  "on-charging-100": "notify-send -u normal 'Battery Full!'"
+      "on-discharging-warning": "notify-send -u normal -c battery -i battery-low 'Low Battery (<30%)'",
+		  "on-discharging-critical": "notify-send -u critical -c battery -i battery-caution 'Very Low Battery (<15%)'",
+      "on-discharging-5": "notify-send -u critical -c battery -i battery-missing 'Battery Level critically low (<5%)'",
+		  "on-charging-100": "notify-send -u low -c battery -i battery-full 'Battery Full! (100%)'"
 		},
     "format": "{icon} {capacity}%",
     "format-full": "{icon} {capacity}%",
