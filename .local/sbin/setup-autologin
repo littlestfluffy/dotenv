@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+if [[ $EUID -ne 0 ]]; then
+    echo "❌ This script must be run as root. Try again with:"
+    echo "   sudo ${0}"
+    exit 1
+fi
+
+USERNAME=${1:-${SUDO_USER}}
+
+if [[ "$USERNAME" == "root" ]]; then
+    echo "❌ Cannot configure greetd for root user"
+    exit 1
+fi
+
+if [[ -d /etc/greetd ]]; then
+  systemctl disable greetd.service
+  pacman -Rcsu greetd
+  rm -rf /etc/greetd
+fi
+
+mkdir -p /etc/systemd/system/getty@tty1.service.d
+
+tee /etc/systemd/system/getty@tty1.service.d/override.conf > /dev/null <<EOF
+[Service]
+ExecStart=
+ExecStart=-/sbin/agetty --autologin $USERNAME --noclear --skip-login --noissue %I \$TERM
+EOF
+
+if [[ -d ~/.config/systemd/user/graphical-session.target.wants ]]; then
+  rm -rf ~/.config/systemd/user/graphical-session.target.wants
+fi
+
+systemctl daemon-reload
+
+echo "✅ Autologin configured for user: ${USERNAME}"
