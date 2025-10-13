@@ -40,6 +40,7 @@
 !/.local
 /.local/*
 !/.local/bin
+/.local/bin/shadow.sh
 !/.local/sbin
 !/.local/docs
 !/.local/share
